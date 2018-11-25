@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    {% for item in advert %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">User Name</a>
+              <small class="text-muted">Date</small>
+            </div>
+            <h2><a class="article-title" href="/home/{{ item.id }}">{{ item.title }}</a></h2>
+            <p class="article-content">{{ item.description }}</p>
+          </div>
+        </article>
+    {% endfor%}
+{% endblock content %}

@@ -1,0 +1,22 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Marketplace</title>
+    <style type="text/css">
+        .desc_delimetr {
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    {% for title in category %}
+    <div>{{ title }}</div>
+    {% endfor %}
+    <br>
+    {% for item in advert %}
+    <div><a href = "/post/{{ item.id }}">{{ item.title }}</a>
+        <span class = desc_delimetr>    #####    </span>
+        <span>{{ item.description }}</span>
+        </div>
+    {% endfor %}
+</body>
+</html>

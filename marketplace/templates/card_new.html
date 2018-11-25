@@ -1,0 +1,21 @@
+{% extends "layout_new.html" %}
+{% block content %}
+    <div class="card-container">
+        <div class="card-item-container col-xs-8 col-sm-8 col-md-8">
+          <div class="card-item-card-box">
+            <div class="card-item-img-box">
+                <img src="{{ url_for('static', filename='imgs/img_{}_1.jpg'.format(item.item_id)) }}" class="img-responsive card-item-img" alt="Glasses" width="600" height="600">
+            </div>
+            <div class="item-title-box">
+                <p class="item-title-href">{{ item.title }}</p>
+            </div>
+            <div class="item-price-box">
+                 <p class="item-price text-justify">{{ '{} руб.'.format(item.price) }}</p>
+            </div>
+            <div class="item-description-box">
+                <p class="item-price text-justify">{{ item.description }}</p>
+            </div>
+          </div>
+        </div>
+    </div>
+{% endblock content %}
